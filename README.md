@@ -22,6 +22,7 @@ A list of articles that are essential to understand stream processing.
 - [Continuous queries over append-only databases. SIGMOD 1992](http://www.cs.brandeis.edu/~cs227b/papers/pubsub/TGNO92-Continuous.pdf)
 
 ## Stream Log Collection
+- [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
 - [Questioning the Lambda Architecture](https://www.oreilly.com/ideas/questioning-the-lambda-architecture) A commonly used architecture for managing recent data and archived data. However combining two types of systems for batch and streaming is still painful because analysts need to understand both systems (e.g, Hadoop + Storm, Spark + Spark Streaming, Kafka + other data store)
 - [Dataflow model](http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf) is a unified API for batch and streaming, but the stream data processing problem is fundamentally complex. Writing correct code is still difficult even for experts. 
 - [The Unified Logging Infrastructure for Data Analytics at Twitter. VLDB 2012](http://vldb.org/pvldb/vol5/p1771_georgelee_vldb2012.pdf)
