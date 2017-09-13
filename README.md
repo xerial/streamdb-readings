@@ -29,8 +29,9 @@ A list of articles that are essential to understand stream processing.
 
 ## Stream SQL
 - [Microsoft Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/)
-- [Norikra](http://norikra.github.io/)
+- [Norikra](http://norikra.github.io/) Schema-less Stream Processing with SQL
 - [Esper](http://www.espertech.com/esper/)
+- [KSQL](https://github.com/confluentinc/ksql) A Streaming SQL Engine for Apache Kafka
 
 ## Real-Time Stream Processing
 Real-time stream processing usually means ultra-low latency applications to satisfy SLAs for returning results in a few seconds.
@@ -46,7 +47,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [twitter/heron](https://github.com/twitter/heron)
 - [Microsoft Naiad](https://github.com/MicrosoftResearch/Naiad)
 - [Norikra](http://norikra.github.io/)
-
+- [KSQL](https://github.com/confluentinc/ksql)
 
 ## External Lists
 - List of projects related to stream-processing: https://github.com/manuzhang/awesome-streaming
