@@ -49,6 +49,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [Microsoft Naiad](https://github.com/MicrosoftResearch/Naiad)
 - [Norikra](http://norikra.github.io/)
 - [KSQL](https://github.com/confluentinc/ksql)
+- [Apache Apex](https://apex.apache.org/) Unified stream and batch processing engine.
 
 ## External Lists
 - List of projects related to stream-processing: https://github.com/manuzhang/awesome-streaming
