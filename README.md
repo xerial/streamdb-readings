@@ -15,7 +15,7 @@ A list of articles that are essential to understand stream processing.
 - [Apache Flink: Spinning Fast Iterative Data Flows. PVLDB 2012](http://stratosphere.eu/assets/papers/spinningFastIterativeDataFlows_12.pdf)
 
 ## Incremental Processing with Materialized Views
-- DBToaster: http://vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf. An approach for incremental view maintenance involving complex queries.
+- [DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views (VLDB 2012)](http://vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf). An approach for incremental view maintenance involving complex queries.
 - [How to Win a Hot Dog Eating Contest: Distributed Incremental View Maintenance with Batch Updates](http://www.dbtoaster.org/papers/sigmod2016-dbtoaster-batching_divm.pdf) An efficient way for finding delta of delta queries for computing materialized views. For example, computing delta for select distinct x doesn't improve the query performance, so that we should avoid incremental processing for this kinds of queries.
 - [Generalized Scale Independence Through Incremental Precomputation. M. Armbrust, et al. SIGMOD 2013](http://dl.acm.org/citation.cfm?id=2465333) An approach for guaranteeing response time of queries by classifying query types and preparing materialized views if necessary.
 - [Comet: batched stream processing for data intensive distributed computing (SoCC 10)](https://www.microsoft.com/en-us/research/publication/comet-batched-stream-processing-for-data-intensive-distributed-computing/) A basic style of incremental processing
