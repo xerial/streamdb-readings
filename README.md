@@ -29,6 +29,7 @@ A list of articles that are essential to understand stream processing.
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
 
 ## Stream SQL
+- [Foundations of Streaming SQL](http://s.apache.org/streaming-sql-strata-nyc) by Tyler Akidau. Good illustrations for understanding how regular table-based SQL and streaming SQL are different.
 - [Microsoft Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/)
 - [Norikra](http://norikra.github.io/) Schema-less Stream Processing with SQL
 - [Esper](http://www.espertech.com/esper/)
