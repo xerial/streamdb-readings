@@ -53,6 +53,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [Apache Apex](https://apex.apache.org/) Unified stream and batch processing engine.
 
 ## Commercial Services
+### Stream Ingestion
 - [Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-what-is-event-hubs)
 - [AWS Kinesis Streams](https://aws.amazon.com/kinesis/data-streams/)
 - [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/)
