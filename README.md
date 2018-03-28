@@ -42,6 +42,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [Discretized Streams: Fault-Tolerant Streaming Computation at Scale. NSDI 2013](https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf) An approacy for applying micro-batch style stream processing in Spark. This model has been redesigned in Spark 2.0 as [Structured Streaming](https://spark-summit.org/2017/events/easy-scalable-fault-tolerant-stream-processing-with-structured-streaming-in-apache-spark/). 
   - [Continuous Applications: Evolving Streaming in Apache Spark 2.0](https://databricks.com/blog/2016/07/28/continuous-applications-evolving-streaming-in-apache-spark-2-0.html)
 - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
+- [MacroBase: Prioritizing Attention in Fast Data. P. Bailis, et al. SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf). A data analytics engine that prioritizes end-user attention in high-volume fast data streams.
 
 ## GitHub Projects
 - [Google Dataflow Open source API for Java](https://github.com/GoogleCloudPlatform/DataflowJavaSDK)
