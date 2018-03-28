@@ -52,5 +52,10 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [KSQL](https://github.com/confluentinc/ksql)
 - [Apache Apex](https://apex.apache.org/) Unified stream and batch processing engine.
 
+## Commercial Services
+- [Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [AWS Kinesis Streams](https://aws.amazon.com/kinesis/data-streams/)
+- [Google Cloud Dataflow](https://cloud.google.com/dataflow/)
+
 ## External Lists
 - List of projects related to stream-processing: https://github.com/manuzhang/awesome-streaming
