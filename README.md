@@ -55,7 +55,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 ## Commercial Services
 - [Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-what-is-event-hubs)
 - [AWS Kinesis Streams](https://aws.amazon.com/kinesis/data-streams/)
-- [Google Cloud Dataflow](https://cloud.google.com/dataflow/)
+- [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/)
 
 ## External Lists
 - List of projects related to stream-processing: https://github.com/manuzhang/awesome-streaming
