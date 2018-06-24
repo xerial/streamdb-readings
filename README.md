@@ -10,6 +10,7 @@ A list of articles that are essential to understand stream processing.
   - [Continuous Applications: Evolving Streaming in Apache Spark 2.0](https://databricks.com/blog/2016/07/28/continuous-applications-evolving-streaming-in-apache-spark-2-0.html)
 - [Dataflow/Beam & Spark: A Programming Model Comparison](https://cloud.google.com/dataflow/blog/dataflow-beam-and-spark-comparison)
 - [ReactiveX](http://reactivex.io/). Stream processing patterns for functional programming.
+- [Akka Stream](https://doc.akka.io/docs/akka/2.5/stream/index.html) Stream processing DSL for Akka 
 - [A Practical Guide to Selecting A Stream Processing Technology](http://www.slideshare.net/ConfluentInc/a-practical-guide-to-selecting-a-stream-processing-technology). A good explanation of stream processing
 - [Trill: A High-Performance Incremental Query Processor for Diverse Analytics. B. Chandramouli, et al. VLDB 2014](https://www.microsoft.com/en-us/research/publication/trill-a-high-performance-incremental-query-processor-for-diverse-analytics/)
 
