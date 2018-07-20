@@ -52,7 +52,8 @@ Real-time stream processing usually means ultra-low latency applications to sati
  
 
 ## GitHub Projects
-- [Google Dataflow Open source API for Java](https://github.com/GoogleCloudPlatform/DataflowJavaSDK)
+- [Apache Beam](https://github.com/apache/beam) A unified model for defining both batch and streaming data-parallel processing pipelines.
+  - It was [Google Dataflow Open source API for Java](https://github.com/GoogleCloudPlatform/DataflowJavaSDK)
 - [spotify/scio: A Scala API for Google Cloud Dataflow](https://github.com/spotify/scio)
 - [twitter/heron](https://github.com/twitter/heron)
 - [Microsoft Naiad](https://github.com/MicrosoftResearch/Naiad)
