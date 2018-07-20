@@ -8,6 +8,7 @@ A list of articles that are essential to understand stream processing.
 - [Structured Streaming: A Declarative API for Real-Time Applications in Apache Spark. SIGMOD2018](https://cs.stanford.edu/~matei/papers/2018/sigmod_structured_streaming.pdf). A good summary of challenges around continous stream processing and univying APIs for batch and stream processing. 
   - [Discretized Streams: Fault-Tolerant Streaming Computation at Scale. NSDI 2013](https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf) An approacy for applying micro-batch style stream processing in Spark. This model has been redesigned in Spark 2.0 as [Structured Streaming](https://spark-summit.org/2017/events/easy-scalable-fault-tolerant-stream-processing-with-structured-streaming-in-apache-spark/). 
   - [Continuous Applications: Evolving Streaming in Apache Spark 2.0](https://databricks.com/blog/2016/07/28/continuous-applications-evolving-streaming-in-apache-spark-2-0.html)
+- [Drizzle: Fast and Adaptable Stream Processing at Scale. SOSP 2017](http://shivaram.org/publications/drizzle-sosp17.pdf) An approach for reducing the overhead of the coodincation between stream processing tasks. 
 - [Dataflow/Beam & Spark: A Programming Model Comparison](https://cloud.google.com/dataflow/blog/dataflow-beam-and-spark-comparison)
 - [ReactiveX](http://reactivex.io/). Stream processing patterns for functional programming.
 - [Akka Stream](https://doc.akka.io/docs/akka/2.5/stream/index.html) Stream processing DSL for Akka 
