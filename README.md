@@ -33,6 +33,7 @@ A list of articles that are essential to understand stream processing.
 - [Kafka](https://kafka.apache.org/) is often used for providing _replayable_ streaming data sources.
 - [Apache Pulsar](https://pulsar.incubator.apache.org/) A distributed pub-sub messaging system originally
 created at Yahoo!
+- [OpenMessaging](https://github.com/openmessaging) Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
 - [MQTT](http://mqtt.org/) A machine-to-machine (M2M)/"Internet of Things" connectivity protocol.
 - [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
@@ -56,6 +57,7 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [KSQL](https://github.com/confluentinc/ksql) A Streaming SQL Engine for Apache Kafka
 
 ## GitHub Projects
+- [OpenMessaging](https://github.com/openmessaging)
 - [Apache Beam](https://github.com/apache/beam) A unified model for defining both batch and streaming data-parallel processing pipelines.
   - It was [Google Dataflow Open source API for Java](https://github.com/GoogleCloudPlatform/DataflowJavaSDK)
 - [spotify/scio: A Scala API for Google Cloud Dataflow](https://github.com/spotify/scio)
