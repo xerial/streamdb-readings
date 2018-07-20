@@ -28,30 +28,29 @@ A list of articles that are essential to understand stream processing.
 - [Continuous queries over append-only databases. SIGMOD 1992](http://www.cs.brandeis.edu/~cs227b/papers/pubsub/TGNO92-Continuous.pdf)
 - [Selecting Subexpressions to Materialize at Datacenter Scale. PVLDB 2018](http://www.vldb.org/pvldb/vol11/p800-jindal.pdf) Microsoftr SCOPE - Automatically finding common sub-expressions among queries and materializing their results for reducing the overhead of recurrent queries.
 
-## Stream Log Collection
+## Stream Log Collection Systems
 - [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
 - [Kafka](https://kafka.apache.org/) is often used for providing _replayable_ streaming data sources.
-- [Questioning the Lambda Architecture](https://www.oreilly.com/ideas/questioning-the-lambda-architecture) A commonly used architecture for managing recent data and archived data. However combining two types of systems for batch and streaming is still painful because analysts need to understand both systems (e.g, Hadoop + Storm, Spark + Spark Streaming, Kafka + other data store)
-- [Dataflow model](http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf) is a unified API for batch and streaming, but the stream data processing problem is fundamentally complex. Writing correct code is still difficult even for experts. 
-- [The Unified Logging Infrastructure for Data Analytics at Twitter. VLDB 2012](http://vldb.org/pvldb/vol5/p1771_georgelee_vldb2012.pdf)
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
+- [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
+  - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
+  - [The Unified Logging Infrastructure for Data Analytics at Twitter. VLDB 2012](http://vldb.org/pvldb/vol5/p1771_georgelee_vldb2012.pdf)
+- [Questioning the Lambda Architecture](https://www.oreilly.com/ideas/questioning-the-lambda-architecture) A commonly used architecture for managing recent data and archived data. However combining two types of systems for batch and streaming is still painful because analysts need to understand both systems (e.g, Hadoop + Storm, Spark + Spark Streaming, Kafka + other data store)
 
+## Real-Time Stream Processing
+Real-time stream processing usually means ultra-low latency applications to satisfy SLAs for returning results in a few seconds.
+
+- [The Stratosphere Platform for Big Data Analytics](http://stratosphere.eu/assets/papers/2014-VLDBJ_Stratosphere_Overview.pdf). Strasospher is a former name of [Apache Flink](https://flink.apache.org/).
+- [The 8 Requirements of Real-Time Stream Processing. M. Stonebraker, et al. SIGMOD Record 2005](http://cs.brown.edu/~ugur/8rulesSigRec.pdf). A summary is also available in [the morning paper](https://blog.acolyer.org/2014/12/03/the-8-requirements-of-real-time-stream-processing/)
+- [MacroBase: Prioritizing Attention in Fast Data. P. Bailis, et al. SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf). A data analytics engine that prioritizes end-user attention in high-volume fast data streams.
+  - A prototype implementation on [GitHub](https://github.com/stanford-futuredata/macrobase)
+ 
 ## Stream SQL
 - [Foundations of Streaming SQL](http://s.apache.org/streaming-sql-strata-nyc) by Tyler Akidau. Good illustrations for understanding how regular table-based SQL and streaming SQL are different.
 - [Microsoft Azure Stream Analytics](https://azure.microsoft.com/en-us/services/stream-analytics/)
 - [Norikra](http://norikra.github.io/) Schema-less Stream Processing with SQL
 - [Esper](http://www.espertech.com/esper/)
 - [KSQL](https://github.com/confluentinc/ksql) A Streaming SQL Engine for Apache Kafka
-
-## Real-Time Stream Processing
-Real-time stream processing usually means ultra-low latency applications to satisfy SLAs for returning results in a few seconds.
-- [The 8 Requirements of Real-Time Stream Processing. M. Stonebraker, et al. SIGMOD Record 2005](http://cs.brown.edu/~ugur/8rulesSigRec.pdf). A summary is also available in [the morning paper](https://blog.acolyer.org/2014/12/03/the-8-requirements-of-real-time-stream-processing/)
-- [The Stratosphere Platform for Big Data Analytics](http://stratosphere.eu/assets/papers/2014-VLDBJ_Stratosphere_Overview.pdf). Strasospher is a former name of [Apache Flink](https://flink.apache.org/).
-- [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
-  - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
-- [MacroBase: Prioritizing Attention in Fast Data. P. Bailis, et al. SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf). A data analytics engine that prioritizes end-user attention in high-volume fast data streams.
-  - A prototype implementation on [GitHub](https://github.com/stanford-futuredata/macrobase)
- 
 
 ## GitHub Projects
 - [Apache Beam](https://github.com/apache/beam) A unified model for defining both batch and streaming data-parallel processing pipelines.
