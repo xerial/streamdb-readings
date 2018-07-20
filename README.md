@@ -31,6 +31,8 @@ A list of articles that are essential to understand stream processing.
 ## Stream Log Collection Systems
 - [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
 - [Kafka](https://kafka.apache.org/) is often used for providing _replayable_ streaming data sources.
+- [Apache Pulsar](https://pulsar.incubator.apache.org/) A distributed pub-sub messaging system originally
+created at Yahoo!
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
 - [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
   - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
