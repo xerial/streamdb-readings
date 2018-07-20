@@ -34,6 +34,7 @@ A list of articles that are essential to understand stream processing.
 - [Apache Pulsar](https://pulsar.incubator.apache.org/) A distributed pub-sub messaging system originally
 created at Yahoo!
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
+- [MQTT](http://mqtt.org/) A machine-to-machine (M2M)/"Internet of Things" connectivity protocol.
 - [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
   - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
   - [The Unified Logging Infrastructure for Data Analytics at Twitter. VLDB 2012](http://vldb.org/pvldb/vol5/p1771_georgelee_vldb2012.pdf)
