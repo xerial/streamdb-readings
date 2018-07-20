@@ -26,6 +26,7 @@ A list of articles that are essential to understand stream processing.
 - [Generalized Scale Independence Through Incremental Precomputation. M. Armbrust, et al. SIGMOD 2013](http://dl.acm.org/citation.cfm?id=2465333) An approach for guaranteeing response time of queries by classifying query types and preparing materialized views if necessary.
 - [Comet: batched stream processing for data intensive distributed computing (SoCC 10)](https://www.microsoft.com/en-us/research/publication/comet-batched-stream-processing-for-data-intensive-distributed-computing/) A basic style of incremental processing
 - [Continuous queries over append-only databases. SIGMOD 1992](http://www.cs.brandeis.edu/~cs227b/papers/pubsub/TGNO92-Continuous.pdf)
+- [Selecting Subexpressions to Materialize at Datacenter Scale. PVLDB 2018](http://www.vldb.org/pvldb/vol11/p800-jindal.pdf) Microsoftr SCOPE - Automatically finding common sub-expressions among queries and materializing their results for reducing the overhead of recurrent queries.
 
 ## Stream Log Collection
 - [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
