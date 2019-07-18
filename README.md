@@ -3,7 +3,7 @@
 A list of articles that are essential to understand stream processing.
 
 ## Programming Models for Stream Processing 
-- [One SQL to Rule Them All. Edmon Begoli, Tyler Akidau, Fabian Hueske, Julian Hyde, Kathryn Knight, Kenneth Knowles SIGMOD 2019](https://arxiv.org/abs/1905.12133) A proposal to extend the current SQL semantics to support both batch and stream processing with time-varying relations (TVR), event time, and materialization control.
+- [One SQL to Rule Them All. Edmon Begoli, Tyler Akidau, Fabian Hueske, Julian Hyde, Kathryn Knight, Kenneth Knowles SIGMOD 2019](https://arxiv.org/abs/1905.12133) A proposal to extend the current SQL semantics to support both batch and stream processing by adding time-varying relations (TVR), event time, and materialization control.
 - [DryadLINQ: A System for General-Purpose Distributed Data-Parallel Computing Using a High-Level Language. Y. Yu, et al. OSDI08](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/yu_y/yu_y.pdf) The origin of declarative data processing operators (e.g., map, filter, groupBy, etc.) in modern programming languages. 
 - [OpenMessaging:Common Use Cases](https://github.com/openmessaging/specification/blob/master/usecase.md) Illustrations of typical stream processing patterns from OpenMessaging.
 - [The world beyond batch: Streaming 101](https://www.oreilly.com/ideas/the-world-beyond-batch-streaming-101). An article written by the author of Google Dataflow. Streaming is actually a superset of batch processing for unbounded data. This article explains what is unbounded data and how to manage late coming data. You can also learn what streaming systems can do and can't do, and the differences of event times and processing times, and varieties of time-window based processing. 
