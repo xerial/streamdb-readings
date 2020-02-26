@@ -2,6 +2,10 @@
 
 A list of articles that are essential to understand stream processing.
 
+## Books 
+- [Designing Data Intensive Applications. The Big Ideas Behind Reliable, Scalable, and Maintainable Systems. Martine Kleppmann](https://www.amazon.co.jp/dp/B06XPJML5D/) This is a book we've been waiting for 10 years. A definitive guide for entering the field of distirbuted systems and stream data processing. This book covers fundamental concepts, techniques, and challenges in keep processing large volumes of data continously.
+- [Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing](https://www.amazon.co.jp/Streaming-Systems-Large-Scale-Processing-English-ebook/dp/B07FMDY5CC/) A book by the authors of Streaming 101, Spark Streaming. This book introduces how we can unify batch processing and stream processing within a single system and covers the basic ideas of Stream SQL. 
+
 ## Programming Models for Stream Processing 
 - [One SQL to Rule Them All. Edmon Begoli, Tyler Akidau, Fabian Hueske, Julian Hyde, Kathryn Knight, Kenneth Knowles SIGMOD 2019](https://arxiv.org/abs/1905.12133) A proposal to extend the current SQL semantics to support both batch and stream processing by adding time-varying relations (TVR), event time, and materialization control.
 - [DryadLINQ: A System for General-Purpose Distributed Data-Parallel Computing Using a High-Level Language. Y. Yu, et al. OSDI08](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/yu_y/yu_y.pdf) The origin of declarative data processing operators (e.g., map, filter, groupBy, etc.) in modern programming languages. 
