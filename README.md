@@ -22,6 +22,10 @@ A list of articles that are essential to understand stream processing.
 - [A Practical Guide to Selecting A Stream Processing Technology](http://www.slideshare.net/ConfluentInc/a-practical-guide-to-selecting-a-stream-processing-technology). A good explanation of stream processing
 - [Trill: A High-Performance Incremental Query Processor for Diverse Analytics. B. Chandramouli, et al. VLDB 2014](https://www.microsoft.com/en-us/research/publication/trill-a-high-performance-incremental-query-processor-for-diverse-analytics/)
 
+## Watermark Management for Stream Processing
+
+- [Watermarks in Stream Processing Systems: Semantics and Comparative Analysis of Apache Flink and Google Cloud Dataflow. VLDB2021](http://vldb.org/pvldb/vol14/p3135-begoli.pdf). Describes basic definitions of watermarks and shows challenges in managing watermarks. 
+
 ## Iterative Data Processing
 - [Olston, C. et al. 2011. Nova: continuous Pig/Hadoop workflows. (Jun. 2011)](http://infolab.stanford.edu/~olston/publications/sigmod11.pdf)
 - [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://cs.stanford.edu/~matei/courses/2015/6.S897/readings/naiad.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/)
