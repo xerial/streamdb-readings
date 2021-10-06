@@ -30,6 +30,7 @@ A list of articles that are essential to understand stream processing.
 ## Workload Optimization
 
 - [Towards a Learning Optimizer for Shared Clouds (VLDB 2019)](http://www.vldb.org/pvldb/vol12/p210-wu.pdf). Estimate cardinality models from the previous job executions in order to optimize the overall workloads. This work uses the multi-layer perceptron (MLP) neural network for learning models from query exeuction features (e.g., job name, input cardinality, average row length, input dataset names, etc.)
+- [CrocodileDB: Efficient Database Execution through Intelligent Deferment (CIDR 2020)](http://cidrdb.org/cidr2020/papers/p14-shang-cidr20.pdf) This paper introduces Intermittent Query Processing (IQP) approach for utilizing the knowledge about new data, query semantics, and users' expectation together to reduce the overall processing cost. It uses Deep Q-Materialization (DQM) to make a tradeoff under a certain resource constraint (e.g., memory, CPUs, storage) to decide how much data will be cached, pre-computed, pre-loaded, etc.
 - [Peregrine: Workload Optimization for Cloud Query Engines (SOCC 2019)](http://jindal-web.appspot.com/papers/241-jindal.pdf) Analyzing the workload of historical queries and optimize recurrring queries, similar queries, and coordinating queries by extracing common subexpressions that can be materialized. To support various query engines including Spark, Microsoft has creaetd a common intermediate representation (IR) of workloads. 
 
 ## Iterative Data Processing
