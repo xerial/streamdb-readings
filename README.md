@@ -29,6 +29,7 @@ A list of articles that are essential to understand stream processing.
 
 ## Workload Optimization
 
+- [Towards a Learning Optimizer for Shared Clouds (VLDB 2019)](http://www.vldb.org/pvldb/vol12/p210-wu.pdf). Estimate cardinality models from the previous job executions in order to optimize the overall workloads. This work uses the multi-layer perceptron (MLP) neural network for learning models from query exeuction features (e.g., job name, input cardinality, average row length, input dataset names, etc.)
 - [Peregrine: Workload Optimization for Cloud Query Engines (SOCC 2019)](http://jindal-web.appspot.com/papers/241-jindal.pdf) Analyzing the workload of historical queries and optimize recurrring queries, similar queries, and coordinating queries by extracing common subexpressions that can be materialized. To support various query engines including Spark, Microsoft has creaetd a common intermediate representation (IR) of workloads. 
 
 ## Iterative Data Processing
