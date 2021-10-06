@@ -27,6 +27,10 @@ A list of articles that are essential to understand stream processing.
 - [Watermarks in Stream Processing Systems: Semantics and Comparative Analysis of Apache Flink and Google Cloud Dataflow. VLDB 2021](http://vldb.org/pvldb/vol14/p3135-begoli.pdf). Describes basic definitions of watermarks and shows challenges and trade-offs in managing watermarks. 
 - [Watermarking in stream processing | Course in Spark Structured Streaming 3.0 | Lesson 7](https://www.youtube.com/watch?v=XjlKGvUt2dY) A good tutorial explaining the notions of stream processing and watermark management.
 
+## Workload Optimization
+
+- [Peregrine: Workload Optimization for Cloud Query Engines (SOCC 2019)](http://jindal-web.appspot.com/papers/241-jindal.pdf) Analyzing the workload of historical queries and optimize recurrring queries, similar queries, and coordinating queries by extracing common subexpressions that can be materialized. To support various query engines including Spark, Microsoft has creaetd a common intermediate representation (IR) of workloads. 
+
 ## Iterative Data Processing
 - [Olston, C. et al. 2011. Nova: continuous Pig/Hadoop workflows. (Jun. 2011)](http://infolab.stanford.edu/~olston/publications/sigmod11.pdf)
 - [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://cs.stanford.edu/~matei/courses/2015/6.S897/readings/naiad.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/)
