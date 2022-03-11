@@ -3,7 +3,8 @@
 A list of articles that are essential to understand stream processing.
 
 ## Books 
-- [Designing Data Intensive Applications. The Big Ideas Behind Reliable, Scalable, and Maintainable Systems. Martine Kleppmann](https://www.amazon.co.jp/dp/B06XPJML5D/) This is a book we've been waiting for 10 years. A definitive guide for entering the field of distirbuted systems and stream data processing. This book covers fundamental concepts, techniques, and challenges in keep processing large volumes of data continously.
+- [Designing Data Intensive Applications. The Big Ideas Behind Reliable, Scalable, and Maintainable Systems. Martine Kleppmann](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) This is a book we've been waiting for 10 years. A definitive guide for entering the field of distirbuted systems and stream data processing. This book covers fundamental concepts, techniques, and challenges in keep processing large volumes of data continously. 
+   -  Japanese translation of the book 「[データ指向アプリケーションデザイン](https://amzn.to/3I40Pkk)」 is also available
 - [Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing](https://www.amazon.co.jp/Streaming-Systems-Large-Scale-Processing-English-ebook/dp/B07FMDY5CC/) A book by the authors of Streaming 101, Spark Streaming. This book introduces how we can unify batch processing and stream processing within a single system and covers the basic ideas of Stream SQL. 
 
 ## Programming Models for Stream Processing 
