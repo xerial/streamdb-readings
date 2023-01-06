@@ -8,6 +8,7 @@ A list of articles that are essential to understand stream processing.
 - [Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing](https://www.amazon.co.jp/Streaming-Systems-Large-Scale-Processing-English-ebook/dp/B07FMDY5CC/) A book by the authors of Streaming 101, Spark Streaming. This book introduces how we can unify batch processing and stream processing within a single system and covers the basic ideas of Stream SQL. 
 
 ## Programming Models for Stream Processing 
+
 - [One SQL to Rule Them All. Edmon Begoli, Tyler Akidau, Fabian Hueske, Julian Hyde, Kathryn Knight, Kenneth Knowles SIGMOD 2019](https://arxiv.org/abs/1905.12133) A proposal to extend the current SQL semantics to support both batch and stream processing by adding time-varying relations (TVR), event time, and materialization control.
 - [DryadLINQ: A System for General-Purpose Distributed Data-Parallel Computing Using a High-Level Language. Y. Yu, et al. OSDI08](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/yu_y/yu_y.pdf) The origin of declarative data processing operators (e.g., map, filter, groupBy, etc.) in modern programming languages. 
 - [OpenMessaging:Common Use Cases](https://github.com/openmessaging/specification/blob/master/usecase.md) Illustrations of typical stream processing patterns from OpenMessaging.
@@ -21,6 +22,11 @@ A list of articles that are essential to understand stream processing.
 - [Akka Stream](https://doc.akka.io/docs/akka/2.5/stream/index.html) Stream processing DSL for Akka 
 - [A Practical Guide to Selecting A Stream Processing Technology](http://www.slideshare.net/ConfluentInc/a-practical-guide-to-selecting-a-stream-processing-technology). A good explanation of stream processing
 - [Trill: A High-Performance Incremental Query Processor for Diverse Analytics. B. Chandramouli, et al. VLDB 2014](https://www.microsoft.com/en-us/research/publication/trill-a-high-performance-incremental-query-processor-for-diverse-analytics/)
+
+## Table Catalog for Stream Processing
+
+- [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](https://www.databricks.com/jp/wp-content/uploads/2020/08/p975-armbrust.pdf) Utilizing scalable object strage on the cloud (e.g., S3), [Delta Lake](https://github.com/delta-io/delta) provides a single table format with versioning (time-travel) and transaction support.
+
 
 ## Watermark Management for Stream Processing
 
