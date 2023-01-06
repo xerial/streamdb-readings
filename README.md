@@ -27,6 +27,7 @@ A list of articles that are essential to understand stream processing.
 
 - [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](https://www.databricks.com/jp/wp-content/uploads/2020/08/p975-armbrust.pdf) Utilizing scalable object strage on the cloud (e.g., S3), [Delta Lake](https://github.com/delta-io/delta) provides a single table format with versioning (time-travel) and transaction support.
 - [Iceberg](https://iceberg.apache.org/) 
+- [Big Metadata: When Metadata is Big Data. (VLDB 2021)](http://vldb.org/pvldb/vol14/p3083-edara.pdf) Columnar table catalog with partition statistics used in Google's BigQuery. 
 
 
 ## Watermark Management for Stream Processing
