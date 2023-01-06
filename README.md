@@ -26,6 +26,7 @@ A list of articles that are essential to understand stream processing.
 ## Table Catalog for Stream Processing
 
 - [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](https://www.databricks.com/jp/wp-content/uploads/2020/08/p975-armbrust.pdf) Utilizing scalable object strage on the cloud (e.g., S3), [Delta Lake](https://github.com/delta-io/delta) provides a single table format with versioning (time-travel) and transaction support.
+- [Iceberg](https://iceberg.apache.org/) 
 
 
 ## Watermark Management for Stream Processing
