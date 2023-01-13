@@ -73,7 +73,7 @@ created at Yahoo!
 ## Real-Time Stream Processing
 Real-time stream processing usually means ultra-low latency applications to satisfy SLAs for returning results in a few seconds.
 
-- [The Stratosphere Platform for Big Data Analytics](http://stratosphere.eu/assets/papers/2014-VLDBJ_Stratosphere_Overview.pdf). Strasospher is a former name of [Apache Flink](https://flink.apache.org/).
+- [The Stratosphere Platform for Big Data Analytics](http://stratosphere.eu/assets/papers/2014-VLDBJ_Stratosphere_Overview.pdf). Stratospher is a former name of [Apache Flink](https://flink.apache.org/).
 - [The 8 Requirements of Real-Time Stream Processing. M. Stonebraker, et al. SIGMOD Record 2005](http://cs.brown.edu/~ugur/8rulesSigRec.pdf). A summary is also available in [the morning paper](https://blog.acolyer.org/2014/12/03/the-8-requirements-of-real-time-stream-processing/)
 - [MacroBase: Prioritizing Attention in Fast Data. P. Bailis, et al. SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf). A data analytics engine that prioritizes end-user attention in high-volume fast data streams.
   - A prototype implementation on [GitHub](https://github.com/stanford-futuredata/macrobase)
