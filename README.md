@@ -28,7 +28,7 @@ A list of articles that are essential to understand stream processing.
 - [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](https://www.databricks.com/jp/wp-content/uploads/2020/08/p975-armbrust.pdf) Utilizing scalable object strage on the cloud (e.g., S3), [Delta Lake](https://github.com/delta-io/delta) provides a single table format with versioning (time-travel) and transaction support.
 - [Iceberg](https://iceberg.apache.org/) 
 - [Big Metadata: When Metadata is Big Data. (VLDB 2021)](http://vldb.org/pvldb/vol14/p3083-edara.pdf) Columnar table catalog with partition statistics used in Google's BigQuery. 
-- [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides a folder structure for placing both streaming and batch data. You can merge fragmented partition data or use it as is for faster real-time data processing. 
+- [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides a file layout for placing both streaming and batch data processing with a transaction support. You can merge fragmented partition data or use it as is for faster real-time data processing. Previously, it was called [Uber Hoodie](https://github.com/uber/hoodie)
 
 
 ## Watermark Management for Stream Processing
@@ -63,7 +63,7 @@ A list of articles that are essential to understand stream processing.
 - [Apache Pulsar](https://pulsar.incubator.apache.org/) A distributed pub-sub messaging system originally
 created at Yahoo!
 - [OpenMessaging](https://github.com/openmessaging) Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
-- [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis
+- [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis. This project has been moved to [Apache Hudi](https://hudi.apache.org/)
 - [MQTT](http://mqtt.org/) A machine-to-machine (M2M)/"Internet of Things" connectivity protocol.
 - [Robust, Scalable, Real-Time Event Time Series Aggregation at Twitter. SIGMOD2018](https://cs.uwaterloo.ca/~jimmylin/publications/Yang_etal_SIGMOD2018.pdf)
   - [Twitter Heron: Stream Processing at Scale. SIGMOD 2015](http://dl.acm.org/citation.cfm?id=2742788)
