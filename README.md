@@ -28,7 +28,7 @@ A list of articles that are essential to understand stream processing.
 - [Delta Lake: High-Performance ACID Table Storage over Cloud Object Stores](https://www.databricks.com/jp/wp-content/uploads/2020/08/p975-armbrust.pdf) Utilizing scalable object strage on the cloud (e.g., S3), [Delta Lake](https://github.com/delta-io/delta) provides a single table format with versioning (time-travel) and transaction support.
 - [Iceberg](https://iceberg.apache.org/) 
 - [Big Metadata: When Metadata is Big Data. (VLDB 2021)](http://vldb.org/pvldb/vol14/p3083-edara.pdf) Columnar table catalog with partition statistics used in Google's BigQuery. 
-- [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides a file layout for placing both streaming and batch data processing with a transaction support. You can merge fragmented partition data or use it as is for faster real-time data processing. Previously, it was called [Uber Hoodie](https://github.com/uber/hoodie)
+- [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides [a file layout](https://hudi.apache.org/tech-specs) for placing both streaming and batch data processing with a transaction support. You can merge fragmented partition data or use it as is for faster real-time data processing. Previously, it was called [Uber Hoodie](https://github.com/uber/hoodie)
 
 
 ## Watermark Management for Stream Processing
