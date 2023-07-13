@@ -3,6 +3,7 @@
 A list of articles that are essential to understand stream processing.
 
 ## Books 
+
 - [Designing Data Intensive Applications. The Big Ideas Behind Reliable, Scalable, and Maintainable Systems. Martine Kleppmann](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) This is a book we've been waiting for 10 years. A definitive guide for entering the field of distirbuted systems and stream data processing. This book covers fundamental concepts, techniques, and challenges in keep processing large volumes of data continously. 
    -  Japanese translation of the book 「[データ指向アプリケーションデザイン](https://amzn.to/3I40Pkk)」 is also available
 - [Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing](https://www.amazon.co.jp/Streaming-Systems-Large-Scale-Processing-English-ebook/dp/B07FMDY5CC/) A book by the authors of Streaming 101, Spark Streaming. This book introduces how we can unify batch processing and stream processing within a single system and covers the basic ideas of Stream SQL. 
@@ -30,6 +31,10 @@ A list of articles that are essential to understand stream processing.
 - [Big Metadata: When Metadata is Big Data. (VLDB 2021)](http://vldb.org/pvldb/vol14/p3083-edara.pdf) Columnar table catalog with partition statistics used in Google's BigQuery. 
 - [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides [a file layout](https://hudi.apache.org/tech-specs) for placing both streaming and batch data processing with a transaction support. You can merge fragmented partition data or use it as is for faster real-time data processing. Previously, it was called [Uber Hoodie](https://github.com/uber/hoodie)
 
+## Incremental Processing in DBMS
+
+- [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and STREAM table objects to subscribe changes in the table. 
+
 
 ## Watermark Management for Stream Processing
 
@@ -47,6 +52,7 @@ A list of articles that are essential to understand stream processing.
 - [Olston, C. et al. 2011. Nova: continuous Pig/Hadoop workflows. (Jun. 2011)](http://infolab.stanford.edu/~olston/publications/sigmod11.pdf)
 - [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://cs.stanford.edu/~matei/courses/2015/6.S897/readings/naiad.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/)
 - [Apache Flink: Spinning Fast Iterative Data Flows. PVLDB 2012](http://stratosphere.eu/assets/papers/spinningFastIterativeDataFlows_12.pdf)
+
 
 ## Incremental Processing with Materialized Views
 - [DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views (VLDB 2012)](http://vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf). An approach for incremental view maintenance involving complex queries.
