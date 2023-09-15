@@ -34,7 +34,7 @@ A list of articles that are essential to understand stream processing.
 ## Incremental Processing in DBMS
 
 - [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and STREAM table objects to subscribe changes in the table. 
-
+- [dbt: Incremental Models](https://docs.getdbt.com/docs/build/incremental-models) dbt, a tool for compiling a sequence of queries from SQL templates, supports a simple incremental processing with conditional switch of SQL queries. 
 
 ## Watermark Management for Stream Processing
 
