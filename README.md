@@ -31,11 +31,6 @@ A list of articles that are essential to understand stream processing.
 - [Big Metadata: When Metadata is Big Data. (VLDB 2021)](http://vldb.org/pvldb/vol14/p3083-edara.pdf) Columnar table catalog with partition statistics used in Google's BigQuery. 
 - [Apache Hudi](https://hudi.apache.org/) Apach Hudi provides [a file layout](https://hudi.apache.org/tech-specs) for placing both streaming and batch data processing with a transaction support. You can merge fragmented partition data or use it as is for faster real-time data processing. Previously, it was called [Uber Hoodie](https://github.com/uber/hoodie)
 
-## Incremental Processing in DBMS
-
-- [Keep Your Distributed Data Warehouse Consistent at a Minimal Cost (PACMMOD 2023)](https://dl.acm.org/doi/10.1145/3589770) Proposes a method for maintaining consistency in large data warehouses while minimizing updates. It solves a dynamic programming problem to balance computational cost and data freshness. Implemented at the YouTube Data Warehouse, the method has cut update requests by 25% by removing non-trivial duplicates, significantly saving computing resources. 
-- [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and STREAM table objects to subscribe changes in the table. 
-- [dbt: Incremental Models](https://docs.getdbt.com/docs/build/incremental-models) dbt, a tool for compiling a sequence of queries from SQL templates, supports a simple incremental processing with conditional switch of SQL queries. 
 
 ## Watermark Management for Stream Processing
 
@@ -54,8 +49,13 @@ A list of articles that are essential to understand stream processing.
 - [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/naiad_sosp2013.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/) The proposed approach is now implemented in Rust [Timely Dataflow](https://github.com/timelydataflow/timely-dataflow)
 - [Apache Flink: Spinning Fast Iterative Data Flows. PVLDB 2012](http://stratosphere.eu/assets/papers/spinningFastIterativeDataFlows_12.pdf)
 
+## Incremental Processing
 
-## Incremental Processing with Materialized Views
+- [Keep Your Distributed Data Warehouse Consistent at a Minimal Cost (PACMMOD 2023)](https://dl.acm.org/doi/10.1145/3589770) Proposes a method for maintaining consistency in large data warehouses while minimizing updates. It solves a dynamic programming problem to balance computational cost and data freshness. Implemented at the YouTube Data Warehouse, the method has cut update requests by 25% by removing non-trivial duplicates, significantly saving computing resources. 
+- [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and STREAM table objects to subscribe changes in the table. 
+- [dbt: Incremental Models](https://docs.getdbt.com/docs/build/incremental-models) dbt, a tool for compiling a sequence of queries from SQL templates, supports a simple incremental processing with conditional switch of SQL queries. 
+
+### Incremental Processing with Materialized Views
 - [DBToaster: Higher-order Delta Processing for Dynamic, Frequently Fresh Views (VLDB 2012)](http://vldb.org/pvldb/vol5/p968_yanifahmad_vldb2012.pdf). An efficient way for finding the delta of delta queries (higher-order delta) for computing materialized views as we receive a new update record. A demo source code written in OCaml and Scala can be found in https://github.com/dbtoaster
 - [How to Win a Hot Dog Eating Contest: Distributed Incremental View Maintenance with Batch Updates M. Nicolik et al. (SIGMOD 2016)](https://www.cs.ox.ac.uk/files/9133/sigmod2016-dbtoaster-batching_divm.pdf) Extending DBToaster for batch and distributed incremental view maintenance setting. 
 - [Generalized Scale Independence Through Incremental Precomputation. M. Armbrust, et al. SIGMOD 2013](http://dl.acm.org/citation.cfm?id=2465333) An approach for guaranteeing the response time of queries by classifying query types and preparing materialized views if necessary.
