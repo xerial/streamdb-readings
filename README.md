@@ -51,7 +51,7 @@ A list of articles that are essential to understand stream processing.
 
 ## Iterative Data Processing
 - [Olston, C. et al. 2011. Nova: continuous Pig/Hadoop workflows. (Jun. 2011)](http://infolab.stanford.edu/~olston/publications/sigmod11.pdf)
-- [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://cs.stanford.edu/~matei/courses/2015/6.S897/readings/naiad.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/)
+- [Naiad: A Timely Dataflow system (SOSP13 best paper)](https://www.microsoft.com/en-us/research/wp-content/uploads/2013/11/naiad_sosp2013.pdf) Differential data processing developed in Microsoft. [Niad Project Page](https://www.microsoft.com/en-us/research/project/naiad/) The proposed approach is now implemented in Rust [Timely Dataflow](https://github.com/timelydataflow/timely-dataflow)
 - [Apache Flink: Spinning Fast Iterative Data Flows. PVLDB 2012](http://stratosphere.eu/assets/papers/spinningFastIterativeDataFlows_12.pdf)
 
 
