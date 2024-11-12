@@ -68,6 +68,7 @@ A list of articles that are essential to understand stream processing.
 - [Amazon Redshift: Automatic Query Rewriting with Materialized Views](https://docs.aws.amazon.com/redshift/latest/dg/materialized-view-auto-rewrite.html) 
 - [Big Query: Smart tuning](https://cloud.google.com/bigquery/docs/materialized-views-use) BigQuery automatically rewrites queries to use materialized views whenever possible. Automatic rewriting improves query performance and cost, and does not change query results.
 - [OpenIVM: a SQL-to-SQL Compiler for Incremental Computations (SIGMOD-Companion 2024)](https://dl.acm.org/doi/10.1145/3626246.3654743) Implements incremental view maintenance (IVM) at the SQL level, implemented as a DuckDB extension ([source code]( https://github.com/ila/duckdb/tree/rdda/extension/openivm))
+- [Incremental Refresh for Materialized Views (Databricks)](https://docs.databricks.com/en/optimizations/incremental-refresh.html)
 
 ## Stream Log Collection Systems
 - [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
