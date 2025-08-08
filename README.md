@@ -55,7 +55,7 @@ A list of essential articles to understand stream processing, including continuo
 
 - [DBSP: Automatic Incremental View Maintenance for Rich Query Languages (VLDB 2023 Best Paper)](https://arxiv.org/abs/2203.16684) By introducing Integration (I) and Differentiation (D) operators, DBSP allows the composition of complex incremental SQL queries, including joins, aggregations, recursive loops, etc. 
 - [Keep Your Distributed Data Warehouse Consistent at a Minimal Cost (PACMMOD 2023)](https://dl.acm.org/doi/10.1145/3589770) Proposes a method for maintaining consistency in large data warehouses while minimizing updates. It solves a dynamic programming problem to balance computational cost and data freshness. Implemented at the YouTube Data Warehouse, the method has cut update requests by 25% by removing non-trivial duplicates, significantly saving computing resources. 
-- [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and STREAM table objects to subscribe changes in the table. 
+- [What’s the Difference? Incremental Processing with Change Queries in Snowflake (ACM Management of Data 2023)](https://dl.acm.org/doi/10.1145/3589776) Snowflake introduces CHANGE queries and [STREAM table](https://docs.snowflake.com/en/user-guide/streams-intro) objects to subscribe changes in the table. 
 - [dbt: Incremental Models](https://docs.getdbt.com/docs/build/incremental-models) dbt, a tool for compiling a sequence of queries from SQL templates, supports a simple incremental processing with conditional switch of SQL queries. 
 
 ### Incremental Processing with Materialized Views
