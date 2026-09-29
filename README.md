@@ -17,6 +17,7 @@ A list of essential articles to understand stream processing, including continuo
 - [Structured Streaming: A Declarative API for Real-Time Applications in Apache Spark. SIGMOD2018](https://cs.stanford.edu/~matei/papers/2018/sigmod_structured_streaming.pdf). A good summary of challenges around continous stream processing and unifying APIs for batch and stream processing. 
   - [Discretized Streams: Fault-Tolerant Streaming Computation at Scale. NSDI 2013](https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf) An approacy for applying micro-batch style stream processing in Spark. This model has been redesigned in Spark 2.0 as [Structured Streaming](https://spark-summit.org/2017/events/easy-scalable-fault-tolerant-stream-processing-with-structured-streaming-in-apache-spark/). 
   - [Continuous Applications: Evolving Streaming in Apache Spark 2.0](https://databricks.com/blog/2016/07/28/continuous-applications-evolving-streaming-in-apache-spark-2-0.html)
+  - [A Decade of Apache Spark Structured Streaming: How We Evolved The Architecture To Meet Real-World Needs. PVLDB 2026](https://www.vldb.org/pvldb/vol19/p4156-roy.pdf) Databricks' retrospective on ten years of Structured Streaming in production: microbatch pipelining for safe concurrency (~3x throughput), adapting sources that don't fit microbatch semantics (Kinesis, Pub/Sub), a real state API (`transformWithState`) with fine-grained observability, and sandboxed per-query execution for access control.
 - [Drizzle: Fast and Adaptable Stream Processing at Scale. SOSP 2017](http://shivaram.org/publications/drizzle-sosp17.pdf) An approach for reducing the overhead of the coordination between stream processing tasks. 
 - [Dataflow/Beam & Spark: A Programming Model Comparison](https://cloud.google.com/dataflow/blog/dataflow-beam-and-spark-comparison)
 - [ReactiveX](http://reactivex.io/). Stream processing patterns for functional programming.
@@ -37,6 +38,7 @@ A list of essential articles to understand stream processing, including continuo
 
 - [The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost in Massive-Scale, Unbounded, Out-of-Order Data Processing. Akidau et al., (Google) VLDB 2015](http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf) The original paper of [Google Cloud Dataflow](https://cloud.google.com/dataflow/), which describes how we can cope with the delay of data arrival (late-coming data) and periodical data processing in a unified API for batch and stream processing. You can also find a summary of this paper at [the morning paper](https://blog.acolyer.org/2015/08/18/the-dataflow-model-a-practical-approach-to-balancing-correctness-latency-and-cost-in-massive-scale-unbounded-out-of-order-data-processing/)
 - [Watermarks in Stream Processing Systems: Semantics and Comparative Analysis of Apache Flink and Google Cloud Dataflow. VLDB 2021](http://vldb.org/pvldb/vol14/p3135-begoli.pdf). Describes basic definitions of watermarks and shows challenges and trade-offs in managing watermarks. 
+- [The Dataflow Model Revisited. Akidau, Fernández-Moctezuma, Lax, Mills (Google/Redpanda) PVLDB 2026](https://www.vldb.org/pvldb/vol19/p4953-fernandez-moctezuma.pdf) A test-of-time retrospective by the original authors of The Dataflow Model (above) on what aged well and what didn't. Verdict: event time, never waiting for completeness, and strong consistency held; triggers were over-engineered; and the mechanisms that actually delivered came from the database playbook — SQL, incremental view maintenance, and materialized views with explicit freshness contracts. Streams and tables are two representations of the same object.
 - [Watermarking in stream processing | Course in Spark Structured Streaming 3.0 | Lesson 7](https://www.youtube.com/watch?v=XjlKGvUt2dY) A good tutorial explaining the notions of stream processing and watermark management.
 
 ## Workload Optimization
@@ -66,17 +68,28 @@ A list of essential articles to understand stream processing, including continuo
 - [Continuous queries over append-only databases. SIGMOD 1992](http://www.cs.brandeis.edu/~cs227b/papers/pubsub/TGNO92-Continuous.pdf)
 - [Selecting Subexpressions to Materialize at Datacenter Scale. PVLDB 2018](http://www.vldb.org/pvldb/vol11/p800-jindal.pdf) Microsoftr SCOPE - Automatically finding common sub-expressions among queries and materializing their results for reducing the overhead of recurrent queries.
 - [Tempura: A General Cost-Based Optimizer Framework for Incremental Data Processing (VLDB 2020)](https://arxiv.org/abs/2009.13631) A cost-based optimizer for choosing the right incremental processing methods. A demo [source code](https://github.com/alibaba/cost-based-incremental-optimizer) extending Apache Calcite is available. 
+- [Incremental Query Optimizer Statistics in Amazon Redshift. Pfeil et al. (AWS) PVLDB 2026](https://www.vldb.org/pvldb/vol19/p3941-pfeil.pdf) Optimizer statistics maintained as incrementally-updated, mergeable data sketches over modified data instead of full-table recomputation. Cut fleet-wide weekly ANALYZE compute for large tables by 40% with equal-or-better accuracy — even optimizer statistics are materialized state kept fresh by deltas.
 - [Napa: Powering Scalable Data Warehousing with Robust Query Performance at Google. VLDB 2021](http://vldb.org/pvldb/vol14/p2986-sankaranarayanan.pdf) Control the timing of eager materialization of queries based on the user's requirements (Favor freshness or performance)
 - [Amazon Redshift: Automatic Query Rewriting with Materialized Views](https://docs.aws.amazon.com/redshift/latest/dg/materialized-view-auto-rewrite.html) 
 - [Big Query: Smart tuning](https://cloud.google.com/bigquery/docs/materialized-views-use) BigQuery automatically rewrites queries to use materialized views whenever possible. Automatic rewriting improves query performance and cost, and does not change query results.
 - [OpenIVM: a SQL-to-SQL Compiler for Incremental Computations (SIGMOD-Companion 2024)](https://dl.acm.org/doi/10.1145/3626246.3654743) Implements incremental view maintenance (IVM) at the SQL level, implemented as a DuckDB extension ([source code]( https://github.com/ila/duckdb/tree/rdda/extension/openivm))
 - [Incremental Refresh for Materialized Views (Databricks)](https://docs.databricks.com/en/optimizations/incremental-refresh.html)
 
+## Disaggregated State Management
+- [Disaggregated State Management in Apache Flink 2.0. Y. Mei, et al. (Alibaba) PVLDB 2025](https://www.vldb.org/pvldb/vol18/p4846-mei.pdf) Remote DFS becomes the primary state storage and local disks a cache, with state updates streamed continuously to the DFS. An asynchronous runtime hides remote-storage latency, and the ForSt state store enables lightweight checkpointing, recovery, and reconfiguration: up to 94% shorter checkpoints and 49x faster recovery. The cloud-database disaggregation playbook (Aurora/Socrates-style) applied to stream state.
+
+## HTAP over Open Lake Storage
+- [ByteHTAP: ByteDance's HTAP System with High Data Freshness and Strong Data Consistency. J. Chen, et al. PVLDB 2022](https://www.vldb.org/pvldb/vol15/p3411-chen.pdf) Separate OLTP (veDB) and OLAP (Flink) engines over unified storage with a rule-based query router — the precursor of veDB-HTAP below.
+- [veDB-HTAP: a Highly Integrated, Efficient and Adaptive HTAP System. J. Chen, et al. (ByteDance) PVLDB 2025](https://www.vldb.org/pvldb/vol18/p4896-chen.pdf) Integrates analytics directly into MySQL via the Secondary Engine mechanism, replaces rule-based routing with a cost-based + ML-learned smart router, and adapts planning/execution/storage to runtime statistics and resource pressure. >3x TPC-H speedup over ByteHTAP at one-third the resources.
+- [Lakebase: Serverless Postgres over Open Lake Storage. (Databricks) PVLDB 2026](https://www.vldb.org/pvldb/vol19/p4385-pandis.pdf) A "third generation" database architecture: transactional compute decoupled from storage, with data in open-format object storage, elastic serverless compute down to zero, instant branching/cloning via copy-on-write, and unified transactional-analytical access over the same lake tables.
+
 ## Stream Log Collection Systems
 - [Fluentd](https://www.fluentd.org/) A unified logging layer from various data sources.
 - [Kafka](https://kafka.apache.org/) is often used for providing _replayable_ streaming data sources.
 - [Apache Pulsar](https://pulsar.incubator.apache.org/) A distributed pub-sub messaging system originally
 created at Yahoo!
+- [Ursa: A Lakehouse-Native Data Streaming Engine for Kafka. S. Guo, M. Merli, et al. (StreamNative) PVLDB 2025](https://www.vldb.org/pvldb/vol18/p5184-guo.pdf) A leaderless, cloud-native, Kafka-compatible engine that writes streams directly to open lakehouse tables on object storage, eliminating leader-based cross-AZ replication, broker disks, and connector chains while matching Kafka's throughput at up to 10x lower infrastructure cost. The log and the table converge into one storage layer.
+- [One Ring to Shuffle Them All: Scalable Intra-Process Data Redistribution with Ring-Buffer Shuffle in Redpanda. PVLDB 2026](https://dl.acm.org/doi/10.14778/3827998.3828039) Replacing the traditional shuffle service with in-process ring buffers in a Kafka-compatible log broker.
 - [OpenMessaging](https://github.com/openmessaging) Cloud-oriented, simple, flexible, vendor-neutral and language-independent standards for messaging
 - [Uber Hoodie](https://github.com/uber/hoodie) Hybrid storage: Avro for streaming import, Parquet for analysis. This project has been moved to [Apache Hudi](https://hudi.apache.org/)
 - [MQTT](http://mqtt.org/) A machine-to-machine (M2M)/"Internet of Things" connectivity protocol.
@@ -92,6 +105,8 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [The 8 Requirements of Real-Time Stream Processing. M. Stonebraker, et al. SIGMOD Record 2005](http://cs.brown.edu/~ugur/8rulesSigRec.pdf). A summary is also available in [the morning paper](https://blog.acolyer.org/2014/12/03/the-8-requirements-of-real-time-stream-processing/)
 - [MacroBase: Prioritizing Attention in Fast Data. P. Bailis, et al. SIGMOD 2017](http://www.bailis.org/papers/macrobase-sigmod2017.pdf). A data analytics engine that prioritizes end-user attention in high-volume fast data streams.
   - A prototype implementation on [GitHub](https://github.com/stanford-futuredata/macrobase)
+- [The Live Database: Firestore's Scalable and Consistent Realtime Queries. (Google) PVLDB 2026](https://dl.acm.org/doi/10.14778/3827998.3828021) Continuously-updated, strongly-consistent queries over transactional data at Google production scale.
+- [How Reliable Are Streams? End-to-End Processing-Guarantee Validation and Performance Benchmarking of Stream Processing Systems. Tahir, Mayer, Doblander, Jacobsen. PVLDB 2025](https://www.vldb.org/pvldb/vol18/p585-tahir.pdf) The PGVal tool empirically validates what Kafka Streams, Storm, and Flink actually deliver under injected failures — reliability, reliable throughput, failure cost, and at-least-once/exactly-once behavior — rather than trusting advertised guarantees.
  
 ## Stream SQL
 - [Foundations of Streaming SQL](http://s.apache.org/streaming-sql-strata-nyc) by Tyler Akidau. Good illustrations for understanding how regular table-based SQL and streaming SQL are different.
@@ -110,6 +125,8 @@ Real-time stream processing usually means ultra-low latency applications to sati
 - [Norikra](http://norikra.github.io/)
 - [KSQL](https://github.com/confluentinc/ksql)
 - [Apache Apex](https://apex.apache.org/) Unified stream and batch processing engine.
+- [Velox](https://github.com/facebookincubator/velox) An open-source, native execution engine library for evaluators of data transformations.
+  - [From Presto to Prestissimo: A Velox-Powered Modernization Journey. (Meta) PVLDB 2026](https://dl.acm.org/doi/10.14778/3827998.3828041) Meta's migration of Presto's Java workers to native Velox-based execution.
 
 ## Commercial Services
 ### Stream Ingestion
